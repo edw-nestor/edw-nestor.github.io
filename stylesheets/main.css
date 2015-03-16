@@ -1,0 +1,109 @@
+/* line 3, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/_reset.css.scss */
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+/* line 3, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+* {
+  margin: o; }
+
+/* line 5, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+html, body {
+  height: 100%;
+  font-family: Verdana, sans-serif;
+  color: #474747;
+  background-color: #ffffff;
+  line-height: 1.25; }
+
+/* line 13, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+ul {
+  list-style-type: none; }
+
+/* line 17, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+a {
+  text-decoration: none;
+  color: black; }
+
+/* line 22, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -200px; }
+
+/* line 29, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+#header {
+  height: 170px;
+  color: black;
+  background-color: #B59351; }
+  /* line 34, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+  #header .me-icon {
+    margin: 0.5%;
+    padding-left: 30px;
+    float: left;
+    clear: both; }
+  /* line 41, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+  #header #me-title {
+    float: left;
+    margin-top: 88px;
+    margin-left: 10px;
+    margin-bottom: 0; }
+  /* line 48, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+  #header .github-icon {
+    float: right;
+    margin-top: 88px;
+    margin-right: 10px; }
+  /* line 54, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+  #header .twitter-icon {
+    float: right;
+    margin-top: 88px;
+    margin-right: 10px; }
+  /* line 60, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+  #header .email-icon {
+    float: right;
+    margin-top: 88px;
+    margin-right: 10px; }
+  /* line 66, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+  #header .resume-icon {
+    float: right;
+    margin-top: 88px;
+    margin-right: 190px; }
+
+/* line 73, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+#main {
+  padding: 8%;
+  width: 45%;
+  background-color: #EAE7D9; }
+
+/* line 79, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+aside {
+  margin: 3%;
+  width: 31%;
+  float: right;
+  clear: both; }
+  /* line 85, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+  aside a:hover {
+    color: cornflowerblue; }
+
+/* line 90, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+footer {
+  color: white;
+  background-color: #0A0F18;
+  height: 200px;
+  clear: both; }
+  /* line 96, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+  footer h1 {
+    line-height: 30px;
+    font-size: 30pt;
+    margin: 0px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px; }
+  /* line 105, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/main.css.scss */
+  footer #opsis-sub-logo {
+    margin: 0px;
+    padding-top: 3px;
+    padding-left: 80px; }
