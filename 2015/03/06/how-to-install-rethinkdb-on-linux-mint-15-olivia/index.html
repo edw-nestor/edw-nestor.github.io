@@ -3,115 +3,137 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/syntax.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/app.js" type="text/javascript" cache="true"></script>
     <title>Blog Title - How to install RethinkDB on Linux Mint 15 (Olivia)</title>
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
   </head>
   <body>
     <div id="wrapper"> 
+
       <div id="header">
-        <a href="/"><img class="me-icon" src="/images/me-150.png" /></a>
-        <h1 id="me-title">Edward Nestor</h1>
-        <a href="#"><img class="resume-icon" alt="resume" src="/images/resume-icon-65.png" /></a>
-        <a href="mailto:edw.nestor@gmail.com"><img class="email-icon" src="/images/email-icon-65.png" /></a>
-        <a href="https://github.com/edw-nestor"><img class="github-icon" src="/images/github-icon-65.png" /></a>
-        <a href="https://twitter.com/edwnest"><img class="twitter-icon" src="/images/twitter-icon-65.png" /></a>
-      </div>
+  <div class="open"> 
+    <span class="cls"></span> 
+    <span>
+      <ul class="sub-menu ">
+        <li> <a href="/">Home</a> </li>
+        <li> <a href="mailto:edw.nestor@gmail.com">Contact</a> </li>
+        <li> <a href="/pages/about">About</a> </li>
+        <li> <a href="/pages/resume">Resume</a> </li>
+        <li> <a href="/">Blog</a> </li>
+      </ul>
+    </span> 
+    <span class="cls"></span> 
+  </div>
+  <a href="/"><img class="me-icon" src="/images/me-150.png" /></a>
+  <h1 id="me-title">Edward Nestor</h1>
+  <a href="/pages/resume"><img class="resume-icon" src="/images/resume-icon-65.png" /></a>
+  <a href="mailto:edw.nestor@gmail.com"><img class="email-icon" src="/images/email-icon-65.png" /></a>
+  <a href="https://github.com/edw-nestor"><img class="github-icon" src="/images/github-icon-65.png" /></a>
+  <a href="https://twitter.com/edwnest"><img class="twitter-icon" src="/images/twitter-icon-65.png" /></a>
+</div>
 
       <aside>
-        <h2>Recent Articles</h2>
-        <ul>
-            <li><a href="/2015/03/06/how-to-install-rethinkdb-on-linux-mint-15-olivia/">How to install RethinkDB on Linux Mint 15 (Olivia)</a> <span>Mar  6</span></li>
-        </ul>
+  <h2>Recent Articles</h2>
+  <ul>
+      <li><a href="/2015/03/06/how-to-install-rethinkdb-on-linux-mint-15-olivia/">How to install RethinkDB on Linux Mint 15 (Olivia)</a> <span>Mar  6</span></li>
+  </ul>
 
-        <h2>Tags</h2>
-        <ul>
-            <li><a href="/tags/rethinkdb/">RethinkDB (1)</a></li>
-            <li><a href="/tags/linux-mint-15/">Linux Mint 15 (1)</a></li>
-        </ul>
+  <h2>Tags</h2>
+  <ul>
+      <li><a href="/tags/rethinkdb/">RethinkDB (1)</a></li>
+      <li><a href="/tags/linux-mint-15/">Linux Mint 15 (1)</a></li>
+  </ul>
 
-        <h2>By Year</h2>
-        <ul>
-            <li><a href="/2015/">2015 (1)</a></li>
-        </ul>
-      </aside>
+  <h2>By Year</h2>
+  <ul>
+      <li><a href="/2015/">2015 (1)</a></li>
+  </ul>
+</aside>
 
       <div id="main" role="main">
         <h2>How to install RethinkDB on Linux Mint 15 (Olivia)</h2>
-        <p>I tried to follow the instructions on their website for pre-packaged binary
-but it did not work.</p>
+        <p>RethinkDB&rsquo;s official website has instructions for installing RethinkDB on
+Linux Mint 16 and Linux Mint 17, however if you are running on Linux Mint 15 (Olivia),
+those instructions just don&rsquo;t work.</p>
 
-<p>The instructions were for mint 16 and 17.</p>
-<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">cool</span>
-  <span class="nb">puts</span> <span class="s2">"I'm cool"</span>
-<span class="k">end</span>
+<p>To install with binaries their instructions say to &ldquo;add the RethinkDB repository
+to your list of repositories and install via apt-get:&rdquo;</p>
+
+<h5>Linux Mint 16</h5>
+<div class="highlight shell"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre> <span class="nb">echo</span> <span class="s2">"deb http://download.rethinkdb.com/apt saucy main"</span> | sudo tee
+ /etc/apt/sources.list.d/rethinkdb.list
 </pre></td></tr></tbody></table>
 </div>
 
-<p>Then i tried to install from source following their instructions and that did
-not work either.</p>
+<h5>Linux Mint 17</h5>
+<div class="highlight shell"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="nb">echo</span> <span class="s2">"deb http://download.rethinkdb.com/apt trusty main"</span> | sudo tee
+/etc/apt/sources.list.d/rethinkdb.list
+</pre></td></tr></tbody></table>
+</div>
 
-<p>The problem was apt-get could not find the required dependencies.</p>
+<h5>Install RethinkDB</h5>
+<div class="highlight shell"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre>wget -qO- http://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install rethinkdb
+</pre></td></tr></tbody></table>
+</div>
 
-<p>So then I decided to try and download source tar ball and proceed with
-./configure, make, sudo make install.</p>
+<p>This does not work for Linux Mint 15 so I decided to try and compile from
+source.</p>
 
-<p>I was hoping mint 15 would have enough tools/libs to get the job done.</p>
+<p>To compile from source RethinkDB&rsquo;s instructions say to download some essential
+libraries needed for the build.</p>
 
-<p>I worked, everything seems to be running fine. I know it&rsquo;s not a very smart
-way to proceed, but I decieded I could always abort the process if something 
-went, wrong.:</p>
+<h5>Install build dependencies</h5>
+<div class="highlight shell"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre>sudo apt-get install build-essential protobuf-compiler python <span class="se">\</span>
+                     libprotobuf-dev libcurl4-openssl-dev <span class="se">\</span>
+                     libboost-all-dev libncurses5-dev <span class="se">\</span>
+                     libjemalloc-dev wget
+</pre></td></tr></tbody></table>
+</div>
 
-<p>The make took a super long time, in fact, I was starting to think it was hung
-but I left it alone and it finnished.</p>
+<p>This also did not work for Linux Mint 15 the command returned with the following
+error:</p>
+<div class="highlight shell"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre>Unable to fetch some archives, maybe run apt-get update or try with
+--fix-missing?
+</pre></td></tr></tbody></table>
+</div>
 
-<p>I tried to follow the instructions on their website for pre-packaged binary
-but it did not work.</p>
+<p>I ran apt-get update &ndash;fix-missing and still got the same error. At this point I
+thought I was out of luck until I decided to download the source code and just try
+to build it.</p>
 
-<p>The instructions were for mint 16 and 17.</p>
+<h5>Get the source code</h5>
+<div class="highlight shell"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre>wget http://download.rethinkdb.com/dist/rethinkdb-1.16.2-1.tgz
+tar xf rethinkdb-1.16.2-1.tgz
+</pre></td></tr></tbody></table>
+</div>
 
-<p>Then i tried to install from source following their instructions and that did
-not work either.</p>
+<h5>Build the server</h5>
+<div class="highlight shell"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="nb">cd </span>rethinkdb-1.16.2-1
+./configure --allow-fetch
+make
+sudo make install
+</pre></td></tr></tbody></table>
+</div>
 
-<p>The problem was apt-get could not find the required dependencies.</p>
+<h2>That&rsquo;s all there is to it. Enjoy RethinkDB.</h2>
 
-<p>So then I decided to try and download source tar ball and proceed with
-./configure, make, sudo make install.</p>
+<div id="disqus_thread"></div>
 
-<p>I was hoping mint 15 would have enough tools/libs to get the job done.</p>
-
-<p>I worked, everything seems to be running fine. I know it&rsquo;s not a very smart
-way to proceed, but I decieded I could always abort the process if something 
-went, wrong.:</p>
-
-<p>The make took a super long time, in fact, I was starting to think it was hung
-but I left it alone and it finnished.</p>
-
-<p>I tried to follow the instructions on their website for pre-packaged binary
-but it did not work.</p>
-
-<p>The instructions were for mint 16 and 17.</p>
-
-<p>Then i tried to install from source following their instructions and that did
-not work either.</p>
-
-<p>The problem was apt-get could not find the required dependencies.</p>
-
-<p>So then I decided to try and download source tar ball and proceed with
-./configure, make, sudo make install.</p>
-
-<p>I was hoping mint 15 would have enough tools/libs to get the job done.</p>
-
-<p>I worked, everything seems to be running fine. I know it&rsquo;s not a very smart
-way to proceed, but I decieded I could always abort the process if something 
-went, wrong.:</p>
-
-<p>The make took a super long time, in fact, I was starting to think it was hung
-but I left it alone and it finnished.</p>
-
-        <div id="disqus_thread"></div>
 <script type="text/javascript">
 //<![CDATA[
                   var disqus_shortname = 'edwardnestor';
@@ -123,15 +145,35 @@ but I left it alone and it finnished.</p>
     })();
 //]]>
 </script>
+
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<p><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></p>
 
       </div>
- 
+
       <footer>
-        <a href="#"><h1>OpsisSoft</h1></a>
-        <h6 id="opsis-sub-logo">web development</h6>
-      </footer>
+  <a href="https://www.opsissoft.com"><img class="opsis" src="/images/opsis-logo-4.svg" /></a>
+
+  <div id="icon-group">
+    <a href="https://twitter.com/edwnest"><img class="twitter-icon" src="/images/twitter-icon-65.png" /></a>
+    <a href="https://github.com/edw-nestor"><img class="github-icon" src="/images/github-icon-65.png" /></a>
+    <a href="mailto:edw.nestor@gmail.com"><img class="email-icon" src="/images/email-icon-65.png" /></a>
+    <a href="/pages/resume"><img class="resume-icon" src="/images/resume-icon-65.png" /></a>
+  </div>
+
+  <div id="footer-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Articles</a></li>
+      <li><a href="mailto:edw.nestor@gmail.com">Contact</a></li>
+      <li><a href="/pages/about">About</a></li>
+      <li><a href="/pages/resume">Resume</a></li>
+    </ul>
+  </div>
+</footer>
+ 
     </div> 
+
   </body>
 </html>

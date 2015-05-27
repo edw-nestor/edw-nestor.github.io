@@ -14,82 +14,106 @@
     <link rel="alternate" href="http://blog.url.com/2015/03/06/how-to-install-rethinkdb-on-linux-mint-15-olivia/"/>
     <id>http://blog.url.com/2015/03/06/how-to-install-rethinkdb-on-linux-mint-15-olivia/</id>
     <published>2015-03-06T11:06:00-05:00</published>
-    <updated>2015-03-18T04:39:46-04:00</updated>
+    <updated>2015-05-27T12:22:28-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;I tried to follow the instructions on their website for pre-packaged binary
-but it did not work.&lt;/p&gt;
+    <content type="html">&lt;p&gt;RethinkDB&amp;rsquo;s official website has instructions for installing RethinkDB on
+Linux Mint 16 and Linux Mint 17, however if you are running on Linux Mint 15 (Olivia),
+those instructions just don&amp;rsquo;t work.&lt;/p&gt;
 
-&lt;p&gt;The instructions were for mint 16 and 17.&lt;/p&gt;
-&lt;div class="highlight ruby"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
-2
-3&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;cool&lt;/span&gt;
-  &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;"I'm cool"&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;p&gt;To install with binaries their instructions say to &amp;ldquo;add the RethinkDB repository
+to your list of repositories and install via apt-get:&amp;rdquo;&lt;/p&gt;
+
+&lt;h5&gt;Linux Mint 16&lt;/h5&gt;
+&lt;div class="highlight shell"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"deb http://download.rethinkdb.com/apt saucy main"&lt;/span&gt; | sudo tee
+ /etc/apt/sources.list.d/rethinkdb.list
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Then i tried to install from source following their instructions and that did
-not work either.&lt;/p&gt;
+&lt;h5&gt;Linux Mint 17&lt;/h5&gt;
+&lt;div class="highlight shell"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"deb http://download.rethinkdb.com/apt trusty main"&lt;/span&gt; | sudo tee
+/etc/apt/sources.list.d/rethinkdb.list
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
 
-&lt;p&gt;The problem was apt-get could not find the required dependencies.&lt;/p&gt;
+&lt;h5&gt;Install RethinkDB&lt;/h5&gt;
+&lt;div class="highlight shell"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;wget -qO- http://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install rethinkdb
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
 
-&lt;p&gt;So then I decided to try and download source tar ball and proceed with
-./configure, make, sudo make install.&lt;/p&gt;
+&lt;p&gt;This does not work for Linux Mint 15 so I decided to try and compile from
+source.&lt;/p&gt;
 
-&lt;p&gt;I was hoping mint 15 would have enough tools/libs to get the job done.&lt;/p&gt;
+&lt;p&gt;To compile from source RethinkDB&amp;rsquo;s instructions say to download some essential
+libraries needed for the build.&lt;/p&gt;
 
-&lt;p&gt;I worked, everything seems to be running fine. I know it&amp;rsquo;s not a very smart
-way to proceed, but I decieded I could always abort the process if something 
-went, wrong.:&lt;/p&gt;
+&lt;h5&gt;Install build dependencies&lt;/h5&gt;
+&lt;div class="highlight shell"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;sudo apt-get install build-essential protobuf-compiler python &lt;span class="se"&gt;\&lt;/span&gt;
+                     libprotobuf-dev libcurl4-openssl-dev &lt;span class="se"&gt;\&lt;/span&gt;
+                     libboost-all-dev libncurses5-dev &lt;span class="se"&gt;\&lt;/span&gt;
+                     libjemalloc-dev wget
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
 
-&lt;p&gt;The make took a super long time, in fact, I was starting to think it was hung
-but I left it alone and it finnished.&lt;/p&gt;
+&lt;p&gt;This also did not work for Linux Mint 15 the command returned with the following
+error:&lt;/p&gt;
+&lt;div class="highlight shell"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;Unable to fetch some archives, maybe run apt-get update or try with
+--fix-missing?
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
 
-&lt;p&gt;I tried to follow the instructions on their website for pre-packaged binary
-but it did not work.&lt;/p&gt;
+&lt;p&gt;I ran apt-get update &amp;ndash;fix-missing and still got the same error. At this point I
+thought I was out of luck until I decided to download the source code and just try
+to build it.&lt;/p&gt;
 
-&lt;p&gt;The instructions were for mint 16 and 17.&lt;/p&gt;
+&lt;h5&gt;Get the source code&lt;/h5&gt;
+&lt;div class="highlight shell"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;wget http://download.rethinkdb.com/dist/rethinkdb-1.16.2-1.tgz
+tar xf rethinkdb-1.16.2-1.tgz
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Then i tried to install from source following their instructions and that did
-not work either.&lt;/p&gt;
+&lt;h5&gt;Build the server&lt;/h5&gt;
+&lt;div class="highlight shell"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;rethinkdb-1.16.2-1
+./configure --allow-fetch
+make
+sudo make install
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
 
-&lt;p&gt;The problem was apt-get could not find the required dependencies.&lt;/p&gt;
+&lt;h2&gt;That&amp;rsquo;s all there is to it. Enjoy RethinkDB.&lt;/h2&gt;
 
-&lt;p&gt;So then I decided to try and download source tar ball and proceed with
-./configure, make, sudo make install.&lt;/p&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
 
-&lt;p&gt;I was hoping mint 15 would have enough tools/libs to get the job done.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+                  var disqus_shortname = 'edwardnestor';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]&gt;
+&lt;/script&gt;
 
-&lt;p&gt;I worked, everything seems to be running fine. I know it&amp;rsquo;s not a very smart
-way to proceed, but I decieded I could always abort the process if something 
-went, wrong.:&lt;/p&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 
-&lt;p&gt;The make took a super long time, in fact, I was starting to think it was hung
-but I left it alone and it finnished.&lt;/p&gt;
-
-&lt;p&gt;I tried to follow the instructions on their website for pre-packaged binary
-but it did not work.&lt;/p&gt;
-
-&lt;p&gt;The instructions were for mint 16 and 17.&lt;/p&gt;
-
-&lt;p&gt;Then i tried to install from source following their instructions and that did
-not work either.&lt;/p&gt;
-
-&lt;p&gt;The problem was apt-get could not find the required dependencies.&lt;/p&gt;
-
-&lt;p&gt;So then I decided to try and download source tar ball and proceed with
-./configure, make, sudo make install.&lt;/p&gt;
-
-&lt;p&gt;I was hoping mint 15 would have enough tools/libs to get the job done.&lt;/p&gt;
-
-&lt;p&gt;I worked, everything seems to be running fine. I know it&amp;rsquo;s not a very smart
-way to proceed, but I decieded I could always abort the process if something 
-went, wrong.:&lt;/p&gt;
-
-&lt;p&gt;The make took a super long time, in fact, I was starting to think it was hung
-but I left it alone and it finnished.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://disqus.com" class="dsq-brlink"&gt;comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>

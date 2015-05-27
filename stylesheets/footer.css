@@ -1,0 +1,43 @@
+/* line 1, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+footer {
+  height: 300px;
+  color: white;
+  background-color: #1C222E; }
+  /* line 15, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer .opsis {
+    padding-left: 40px;
+    padding-top: 40px; }
+  /* line 20, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer .opsis:hover {
+    opacity: 0.7; }
+  /* line 24, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  /* line 34, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer #icon-group {
+    position: absolute;
+    left: 75%; }
+  /* line 39, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer .twitter-icon:hover {
+    opacity: 0.7; }
+  /* line 43, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer .github-icon:hover {
+    opacity: 0.7; }
+  /* line 47, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer .email-icon:hover {
+    opacity: 0.7; }
+  /* line 51, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer .resume-icon:hover {
+    opacity: 0.7; }
+  /* line 55, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer #footer-nav {
+    position: absolute;
+    left: 25%; }
+  /* line 60, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer a {
+    color: silver; }
+  /* line 64, /home/ed/workspace/middleman/edw-nestor.github.io/source/stylesheets/footer.css.scss */
+  footer a:hover {
+    color: black; }
