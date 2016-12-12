@@ -1,267 +1,279 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html>
-<title>EddiePaints.com</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-ship {font-size:200px}
-</style>
-<body>
+  <head>
+    <title>EddiePaints.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">-->
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-ship {font-size:200px}
+    </style>
+  </head>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <ul class="w3-navbar w3-grey w3-card-2 w3-left-align w3-large">
-    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-      <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    </li>
-    <li class="w3-hide-small"><a href="#top" class="w3-padding-large w3-hover-white">EddiePaints.com</a></li>
-    <li class="w3-hide-small"><a href="#work" class="w3-padding-large w3-hover-white">Eddie's Work</a></li>
-    <li class="w3-hide-small"><a href="#praise" class="w3-padding-large w3-hover-white">Praise for Eddie</a></li>
-    <li class="w3-hide-small"><a href="#contact" class="w3-padding-large w3-hover-white">Contact Eddie</a></li>
-  </ul>
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top">
+      <ul class="w3-navbar w3-grey w3-card-2 w3-left-align w3-large">
+        <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+          <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        </li>
+        <li class="w3-hide-small"><a href="#top" class="w3-padding-large w3-hover-white">EddiePaints.com</a></li>
+        <li class="w3-hide-small"><a href="#work" class="w3-padding-large w3-hover-white">Eddie's Work</a></li>
+        <li class="w3-hide-small"><a href="#praise" class="w3-padding-large w3-hover-white">Praise for Eddie</a></li>
+        <li class="w3-hide-small"><a href="#contact" class="w3-padding-large w3-hover-white">Contact Eddie</a></li>
+      </ul>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
-    <ul class="w3-navbar w3-left-align w3-large w3-black">
-      <li><a class="w3-padding-large" href="#work">Eddie's Work</a></li>
-      <li><a class="w3-padding-large" href="#praise">Praise for Eddie</a></li>
-      <li><a class="w3-padding-large" href="#contact">Contact Eddie</a></li>
-    </ul>
-  </div>
-</div>
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+        <ul class="w3-navbar w3-left-align w3-large w3-dark-gray">
+          <li><a class="w3-padding-large" href="#work">Eddie's Work</a></li>
+          <li><a class="w3-padding-large" href="#praise">Praise for Eddie</a></li>
+          <li><a class="w3-padding-large" href="#contact">Contact Eddie</a></li>
+        </ul>
+      </div>
+    </div>
 
-<!-- Home Grid -->
-<header id="top" class="w3-container w3-light-grey w3-center w3-padding-128">
-  <img src="images/eddiepaints.svg" alt="EddiePaints" width="100%" height="auto">
-  <h1 class="w3-margin w3-xxlarge">Welcome to EddiePaints.com</h1>
-  <h1 class="w3-margin w3-xxlarge">Interior &bull; Exterior</h1>
-  <h1 class="w3-margin w3-xxlarge">Residential &bull; Commercial</h1>
-  <a href="#contact" class="contact-eddie-link"><h1 class="w3-margin w3-xxlarge">Contact Eddie for a free estimate</h1></a>
-</header>
+     <!--Home Grid 
+    <header id="top" class="w3-container w3-light-grey w3-center w3-padding-128">
+      <img src="images/eddiepaints.svg" alt="EddiePaints" width="100%" height="auto">
+      <h1 class="w3-margin w3-xxlarge home-grid">Welcome to EddiePaints.com</h1>
+      <h1 class="w3-margin w3-xxlarge home-grid">Interior &bull; Exterior</h1>
+      <h1 class="w3-margin w3-xxlarge home-grid">Residential &bull; Commercial</h1>
+      <a href="#contact" class="contact-eddie-link"><h1 class="w3-margin w3-xxlarge home-grid">Contact Eddie for a free estimate</h1></a>
+    </header>-->
 
-<!-- Quote Grid -->
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-  <h1 class="w3-margin w3-xlarge">picture it painted</h1>
-</div>
+    <!-- Home Grid -->
+    <header id="top" class="w3-container w3-light-grey w3-center w3-padding-128">
+      <img src="images/eddiepaints.svg" alt="EddiePaints" width="100%" height="auto">
+      <h1 class="home-grid">Welcome to EddiePaints.com</h1>
+      <h1 class="home-grid">Interior &bull; Exterior</h1>
+      <h1 class="home-grid">Residential &bull; Commercial</h1>
+      <a href="#contact" class="contact-eddie-link"><h1 class="home-grid">Contact Eddie for a free estimate</h1></a>
+    </header>
 
-<!-- Eddie's Work Grid -->
-<div id="work" class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Eddie's Work</h1>
-      <div class="w3-card-4" style="width:100%">
-        <img src="images/sample-0001.jpg" alt="house" width="100%" class="w3-border w3-padding">
-        <div class="w3-container">
-          <p>Cedar restoration and trim painting</p>
+    <!-- Quote Grid -->
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-32">
+      <h1 class="w3-margin w3-xlarge">picture it painted</h1>
+    </div>
+
+    <!-- Eddie's Work Grid -->
+    <div id="work" class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Eddie's Work</h1>
+          <div class="w3-card-4" style="width:100%">
+            <img src="images/sample-0001.jpg" alt="house" width="100%" class="w3-border w3-padding">
+            <div class="w3-container">
+              <p>Cedar restoration and trim painting</p>
+            </div>
+            <img src="images/sample-0001.jpg" alt="house" width="100%" class="w3-border w3-padding">
+            <div class="w3-container">
+              <p>Cedar restoration and trim painting</p>
+            </div>
+          </div>
+          <div class="w3-card-4" style="width:100%" >
+            <img src="images/sample-0001.jpg" alt="house" width="100%" class="w3-image">
+            <div class="w3-container">
+              <p>Cedar restoration and trim painting</p>
+            </div>
+          </div>
+          <div class="w3-card-4 w3-white">
+            <img src="images/sample-0001.jpg" alt="house" width="100%" height="auto">
+            <div class="w3-container">
+              <p>Cedar restoration and trim painting</p>
+            </div> 
+          </div>
+          <div class="w3-card-4 w3-white">
+            <img src="images/sample-0001.jpg" alt="house" width="100%" height="auto">
+            <div class="w3-container">
+              <p>Cedar restoration and trim painting</p>
+            </div>
+          </div>
         </div>
-        <img src="images/sample-0001.jpg" alt="house" width="100%" class="w3-border w3-padding">
-        <div class="w3-container">
-          <p>Cedar restoration and trim painting</p>
-        </div>
-      </div>
-      <div class="w3-card-4" style="width:100%" >
-        <img src="images/sample-0001.jpg" alt="house" width="100%" class="w3-image">
-        <div class="w3-container">
-          <p>Cedar restoration and trim painting</p>
-        </div>
-      </div>
-      <div class="w3-card-4 w3-white">
-         <img src="images/sample-0001.jpg" alt="house" width="100%" height="auto">
-         <div class="w3-container">
-          <p>Cedar restoration and trim painting</p>
-        </div> 
-      </div>
-      <div class="w3-card-4 w3-white">
-         <img src="images/sample-0001.jpg" alt="house" width="100%" height="auto">
-         <div class="w3-container">
-          <p>Cedar restoration and trim painting</p>
+
+        <div class="w3-third w3-center">
+        <img class="paintcan" src="images/paintbrush.ico" alt="paint can" height="50%" width="auto">
         </div>
       </div>
     </div>
 
-    <div class="w3-third w3-center">
-     <img class="paintcan" src="images/paintbrush.ico" alt="paint can" height="50%" width="auto">
-    </div>
-  </div>
-</div>
-
-<!-- Quote Grid -->
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">picture it painted</h1>
-</div>
-
-<!--  Praise for Eddie Grid -->
-<div id="praise" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-      <img class="paintcan" src="images/paintbrush.ico" alt="paint can" height="50%" width="auto">
+    <!-- Quote Grid -->
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-32">
+        <h1 class="w3-margin w3-xlarge">picture it painted</h1>
     </div>
 
-    <div class="w3-twothird">
-      <h1>Praise for Eddie</h1>
-      <div class="w3-panel  w3-white w3-card-8">
-        <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
-           painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
-           very knowledgeable, very pleasant while doing the painting and left everything clean and in 
-           order at the end of each day. He completed the work in a very timely manner, was very 
-           professional and the end result is a beautiful job. Our house looks 20 years younger! We 
-           recommend Ed and will use him in the future."</i></p>
-           <p>Sue & Dave M, &nbsp; West Chester, PA</p>
-      </div>
-      <div class="w3-panel w3-white w3-card-8">
-        <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
-           painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
-           very knowledgeable, very pleasant while doing the painting and left everything clean and in 
-           order at the end of each day. He completed the work in a very timely manner, was very 
-           professional and the end result is a beautiful job. Our house looks 20 years younger! We 
-           recommend Ed and will use him in the future."</i></p>
-           <p>Sue & Dave M, &nbsp; West Chester, PA</p>
-      </div>
+    <!--  Praise for Eddie Grid -->
+    <div id="praise" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-third w3-center">
+          <img class="paintcan" src="images/paintbrush.ico" alt="paint can" height="50%" width="auto">
+        </div>
 
-      <div class="w3-panel w3-white w3-card-8">
-        <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
-           painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
-           very knowledgeable, very pleasant while doing the painting and left everything clean and in 
-           order at the end of each day. He completed the work in a very timely manner, was very 
-           professional and the end result is a beautiful job. Our house looks 20 years younger! We 
-           recommend Ed and will use him in the future."</i></p>
-           <p>Sue & Dave M, &nbsp; West Chester, PA</p>
-      </div>
+        <div class="w3-twothird">
+          <h1>Praise for Eddie</h1>
+          <div class="w3-panel  w3-white w3-card-8">
+            <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
+              painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
+              very knowledgeable, very pleasant while doing the painting and left everything clean and in 
+              order at the end of each day. He completed the work in a very timely manner, was very 
+              professional and the end result is a beautiful job. Our house looks 20 years younger! We 
+              recommend Ed and will use him in the future."</i></p>
+              <p>Sue & Dave M, &nbsp; West Chester, PA</p>
+          </div>
+          <div class="w3-panel w3-white w3-card-8">
+            <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
+              painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
+              very knowledgeable, very pleasant while doing the painting and left everything clean and in 
+              order at the end of each day. He completed the work in a very timely manner, was very 
+              professional and the end result is a beautiful job. Our house looks 20 years younger! We 
+              recommend Ed and will use him in the future."</i></p>
+              <p>Sue & Dave M, &nbsp; West Chester, PA</p>
+          </div>
 
-      <div class="w3-panel w3-white w3-card-8">
-        <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
-           painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
-           very knowledgeable, very pleasant while doing the painting and left everything clean and in 
-           order at the end of each day. He completed the work in a very timely manner, was very 
-           professional and the end result is a beautiful job. Our house looks 20 years younger! We 
-           recommend Ed and will use him in the future."</i></p>
-           <p>Sue & Dave M, &nbsp; West Chester, PA</p>
-      </div>
+          <div class="w3-panel w3-white w3-card-8">
+            <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
+              painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
+              very knowledgeable, very pleasant while doing the painting and left everything clean and in 
+              order at the end of each day. He completed the work in a very timely manner, was very 
+              professional and the end result is a beautiful job. Our house looks 20 years younger! We 
+              recommend Ed and will use him in the future."</i></p>
+              <p>Sue & Dave M, &nbsp; West Chester, PA</p>
+          </div>
 
-      <div class="w3-panel w3-white w3-card-8">
-        <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
-           painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
-           very knowledgeable, very pleasant while doing the painting and left everything clean and in 
-           order at the end of each day. He completed the work in a very timely manner, was very 
-           professional and the end result is a beautiful job. Our house looks 20 years younger! We 
-           recommend Ed and will use him in the future."</i></p>
-           <p>Sue & Dave M, &nbsp; West Chester, PA</p>        
-      </div>
-      <div class="w3-panel w3-white w3-card-8">
-        <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
-           painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
-           very knowledgeable, very pleasant while doing the painting and left everything clean and in 
-           order at the end of each day. He completed the work in a very timely manner, was very 
-           professional and the end result is a beautiful job. Our house looks 20 years younger! We 
-           recommend Ed and will use him in the future."</i></p>
-           <p>Sue & Dave M, &nbsp; West Chester, PA</p> 
-      </div>
-      <div class="w3-panel w3-white w3-card-8">
-        <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
-           painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
-           very knowledgeable, very pleasant while doing the painting and left everything clean and in 
-           order at the end of each day. He completed the work in a very timely manner, was very 
-           professional and the end result is a beautiful job. Our house looks 20 years younger! We 
-           recommend Ed and will use him in the future."</i></p>
-           <p>Sue & Dave M, &nbsp; West Chester, PA</p>
-      </div>
-      <div class="w3-panel w3-white w3-card-8">
-        <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
-           painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
-           very knowledgeable, very pleasant while doing the painting and left everything clean and in 
-           order at the end of each day. He completed the work in a very timely manner, was very 
-           professional and the end result is a beautiful job. Our house looks 20 years younger! We 
-           recommend Ed and will use him in the future."</i></p>
-           <p>Sue & Dave M, &nbsp; West Chester, PA</p>
-      </div>
-      <div class="w3-panel w3-white w3-card-8">
-        <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
-           painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
-           very knowledgeable, very pleasant while doing the painting and left everything clean and in 
-           order at the end of each day. He completed the work in a very timely manner, was very 
-           professional and the end result is a beautiful job. Our house looks 20 years younger! We 
-           recommend Ed and will use him in the future."</i></p>
-           <p>Sue & Dave M, &nbsp; West Chester, PA</p>
+          <div class="w3-panel w3-white w3-card-8">
+            <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
+              painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
+              very knowledgeable, very pleasant while doing the painting and left everything clean and in 
+              order at the end of each day. He completed the work in a very timely manner, was very 
+              professional and the end result is a beautiful job. Our house looks 20 years younger! We 
+              recommend Ed and will use him in the future."</i></p>
+              <p>Sue & Dave M, &nbsp; West Chester, PA</p>
+          </div>
+
+          <div class="w3-panel w3-white w3-card-8">
+            <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
+              painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
+              very knowledgeable, very pleasant while doing the painting and left everything clean and in 
+              order at the end of each day. He completed the work in a very timely manner, was very 
+              professional and the end result is a beautiful job. Our house looks 20 years younger! We 
+              recommend Ed and will use him in the future."</i></p>
+              <p>Sue & Dave M, &nbsp; West Chester, PA</p>        
+          </div>
+          <div class="w3-panel w3-white w3-card-8">
+            <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
+              painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
+              very knowledgeable, very pleasant while doing the painting and left everything clean and in 
+              order at the end of each day. He completed the work in a very timely manner, was very 
+              professional and the end result is a beautiful job. Our house looks 20 years younger! We 
+              recommend Ed and will use him in the future."</i></p>
+              <p>Sue & Dave M, &nbsp; West Chester, PA</p> 
+          </div>
+          <div class="w3-panel w3-white w3-card-8">
+            <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
+              painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
+              very knowledgeable, very pleasant while doing the painting and left everything clean and in 
+              order at the end of each day. He completed the work in a very timely manner, was very 
+              professional and the end result is a beautiful job. Our house looks 20 years younger! We 
+              recommend Ed and will use him in the future."</i></p>
+              <p>Sue & Dave M, &nbsp; West Chester, PA</p>
+          </div>
+          <div class="w3-panel w3-white w3-card-8">
+            <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
+              painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
+              very knowledgeable, very pleasant while doing the painting and left everything clean and in 
+              order at the end of each day. He completed the work in a very timely manner, was very 
+              professional and the end result is a beautiful job. Our house looks 20 years younger! We 
+              recommend Ed and will use him in the future."</i></p>
+              <p>Sue & Dave M, &nbsp; West Chester, PA</p>
+          </div>
+          <div class="w3-panel w3-white w3-card-8">
+            <p class="w3-large"><i>"We have known Ed for many years. He made the process of cleaning the exterior cedar siding,
+              painting all exterior white trim and porch ceiling very easy. He is easy to work with, 
+              very knowledgeable, very pleasant while doing the painting and left everything clean and in 
+              order at the end of each day. He completed the work in a very timely manner, was very 
+              professional and the end result is a beautiful job. Our house looks 20 years younger! We 
+              recommend Ed and will use him in the future."</i></p>
+              <p>Sue & Dave M, &nbsp; West Chester, PA</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Quote Grid -->
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">picture it painted</h1>
-</div>
-
-<!-- Contact form Grid -->
-<div id="contact" class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Contact Eddie</h1>
-      <form class="contact-eddie" method="POST" action="http://formspree.io/edw.nestor@gmail.com">
-      <fieldset class="form-group">
-        <input data-rule-minlength="2" type="text" class="form-control required w3-input w3-border" 
-          id="name" name="name" placeholder="Name">
-      </fieldset>
-      <fieldset class="form-group">
-        <input type="tel" class="form-control required phoneUS w3-input w3-border" id="phone" 
-          name="phone" placeholder="Phone Number">
-      </fieldset>
-      <fieldset class="form-group">
-        <input type="email" class="form-control required email w3-input w3-border" id="email" 
-          name="email" placeholder="Email Address">
-        <small class="text-muted">
-          We'll never share your email with anyone else.
-        </small>
-      </fieldset>
-      <fieldset class="form-group">
-        <textarea class="form-control required w3-input w3-border" id="textarea" name="textarea" 
-          rows="3" placeholder="Message"></textarea>
-      </fieldset>
-      <button type="submit" class="w3-btn-block w3-blue btn btn-primary">Submit</button>
-      </form>
+    <!-- Quote Grid -->
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-32">
+        <h1 class="w3-margin w3-xlarge">picture it painted</h1>
     </div>
-    <div class="w3-third w3-center">
-      <img class="paintcan" src="images/paintbrush.ico" alt="paint can" height="50%" width="auto">
+
+    <!-- Contact form Grid -->
+    <div id="contact" class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Contact Eddie</h1>
+          <form class="contact-eddie" method="POST" action="http://formspree.io/edw.nestor@gmail.com">
+          <fieldset class="form-group">
+            <input data-rule-minlength="2" type="text" class="form-control required w3-input w3-border" 
+              id="name" name="name" placeholder="Name">
+          </fieldset>
+          <fieldset class="form-group">
+            <input type="tel" class="form-control required phoneUS w3-input w3-border" id="phone" 
+              name="phone" placeholder="Phone Number">
+          </fieldset>
+          <fieldset class="form-group">
+            <input type="email" class="form-control required email w3-input w3-border" id="email" 
+              name="email" placeholder="Email Address">
+            <small class="text-muted">
+              We'll never share your email with anyone else.
+            </small>
+          </fieldset>
+          <fieldset class="form-group">
+            <textarea class="form-control required w3-input w3-border" id="textarea" name="textarea" 
+              rows="3" placeholder="Message"></textarea>
+          </fieldset>
+          <br>
+          <button type="submit" class="w3-btn-block w3-blue btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="w3-third w3-center">
+          <img class="paintcan" src="images/paintbrush.ico" alt="paint can" height="50%" width="auto">
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Footer Grid -->
-<footer id="footer" class="w3-container w3-black w3-padding-64 w3-center w3-opacity">  
-  <div class="w3-xlarge w3-padding-32">
-   <h3>&copy;2016 EddiePaints.com</h3> 
-   <h6>Site design by:&nbsp;<a href="#" target="_blank">OpsisSoft</h6></p>
-  </div>
-</footer>
-
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
+    <!-- Footer Grid -->
+    <footer id="footer" class="w3-container w3-black w3-padding-64 w3-center w3-opacity">  
+      <div class="w3-xlarge w3-padding-32">
+      <h3>&copy;2016 EddiePaints.com</h3> 
+      <h6>Site design by:&nbsp;&nbsp;<a href="#" target="_blank"><b>OpsisSoft</b></h6></p>
+      </div>
+    </footer>
+   
+   <!-- Scripts -->
+    <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
     }
-}
-</script>
-<!--<script>
-  // auto close hamburger menu on small screens
-  click: function() {
-    var navMain = $(".navbar-collapse");
-    navMain.on("click", "a", null, function() {
-      navMain.collapse('hide');
-    }
-</script>-->
-
-</body>
+    </script>
+    <!--<script>
+    // auto close hamburger menu on small screens
+    function closeMenu() {
+      var navMain = document.getElementById("navDemo")
+        navMain.className = navMain.className.replace("w3-show", "")
+      }
+    </script>-->
+  </body>
 </html>
 
 

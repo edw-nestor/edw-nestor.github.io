@@ -1,29 +1,34 @@
+@media only screen and (max-width: 980px) {
+  .home-grid {
+    font-size: 120%;
+  }
+}
+
 .paintcan {
-    margin-top: 25%;
+  margin-top: 25%;
 }
 
 .contact-eddie-link {
-    text-decoration: none;
-    color: #0077e6;
+  text-decoration: none;
+  color: #0077e6;
 }
 
 .contact-eddie-link :hover {
-    color: gray;
+  color: red;
+  text-decoration: underline;
 }
 
 footer {
   text-align: center;
   width: 100%;
   height: 230px;
-  /*color: black;
-  background-color: gray;*/
 }
 
 footer a {
-    text-decoration: none;
-    color: lawngreen;
+  text-decoration: none;
+  color: white;
 }
 
 footer a:hover {
-    color: #0077e6;
+  color: #0077e6;
 }
