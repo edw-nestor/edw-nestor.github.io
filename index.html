@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     .w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
@@ -24,7 +24,7 @@
         <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
           <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
         </li>
-        <li class="w3-hide-small"><a href="#top" class="w3-padding-large w3-hover-white">EddiePaints.com</a></li>
+        <li class=""><a href="#top" class="w3-padding-large w3-hover-white">EddiePaints.com</a></li>
         <li class="w3-hide-small"><a href="#work" class="w3-padding-large w3-hover-white">Eddie's Work</a></li>
         <li class="w3-hide-small"><a href="#praise" class="w3-padding-large w3-hover-white">Praise for Eddie</a></li>
         <li class="w3-hide-small"><a href="#contact" class="w3-padding-large w3-hover-white">Contact Eddie</a></li>
@@ -32,7 +32,7 @@
 
       <!-- Navbar on small screens -->
       <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
-        <ul class="w3-navbar w3-left-align w3-large w3-dark-gray">
+        <ul class="sc-nav w3-navbar w3-left-align w3-large w3-dark-gray">
           <li><a class="w3-padding-large" href="#work">Eddie's Work</a></li>
           <li><a class="w3-padding-large" href="#praise">Praise for Eddie</a></li>
           <li><a class="w3-padding-large" href="#contact">Contact Eddie</a></li>
@@ -266,13 +266,13 @@
         }
     }
     </script>
-    <!--<script>
+    <script>
     // auto close hamburger menu on small screens
-    function closeMenu() {
-      var navMain = document.getElementById("navDemo")
-        navMain.className = navMain.className.replace("w3-show", "")
-      }
-    </script>-->
+    $("#navDemo li").click(function () {
+      $(".sc-nav").hide()
+      window.location.reload()
+    })
+    </script>
   </body>
 </html>
 
