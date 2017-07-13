@@ -2,11 +2,18 @@
   .home-grid {
     font-size: 150%;
   }
+
+  .paintbrush {
+    max-width: 15%;
+  }
 }
 
-.paintcan {
+.paintbrush {
+    width: 50%;
+  }
+/*.paintcan {
   margin-top: 25%;
-}
+}*/
 
 .contact-eddie-link {
   text-decoration: none;
