@@ -8,12 +8,14 @@
   }
 }
 
+/* #top {
+  background-image: url(images/sample-0002.jpg);
+  background-size: 1200px 1200px;
+} */
+
 .paintbrush {
     width: 50%;
-  }
-/*.paintcan {
-  margin-top: 25%;
-}*/
+}
 
 .contact-eddie-link {
   text-decoration: none;
